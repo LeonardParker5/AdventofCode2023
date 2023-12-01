@@ -12,14 +12,8 @@ calibration_sum = 0;
 for line in file:
     calibration = ""
     for i in line:
-        if i.isdigit():
-            calibration += i
-            break
-    for i in reversed(line):
-        if i.isdigit():
-            calibration += i
-            break
-    calibration_sum += int(calibration)
+        if i.isdigit(): calibration += i
+    calibration_sum += int(calibration[0] + calibration[-1])
 print(calibration_sum)
 
 ##########
@@ -33,12 +27,6 @@ for line in file:
     calibration = ""
     for key in numbers: line = line.replace(key, numbers.get(key))
     for i in line:
-        if i.isdigit():
-            calibration += i
-            break
-    for i in reversed(line):
-        if i.isdigit():
-            calibration += i
-            break
-    calibration_sum += int(calibration)
+        if i.isdigit(): calibration += i
+    calibration_sum += int(calibration[0] + calibration[-1])
 print(calibration_sum)
