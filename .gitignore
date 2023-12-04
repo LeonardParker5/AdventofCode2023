@@ -2,7 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=rust,python
 
 # Recursively ignore all files matching ".txt"
-**/*.txt
+*.txt
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
