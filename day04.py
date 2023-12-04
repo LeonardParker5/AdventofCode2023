@@ -19,5 +19,12 @@ print(point_sum)
 # PART 2 #
 ##########
 file = open('Inputs/day04input.txt', 'r')
-cards = [0] * 6
-count = 0
+cards = [1] * 219
+index = 0
+for line in file:
+    wins = len((set(line.split(":")[1].split("|")[0].split()) & set(line.split(":")[1].split("|")[1].split())))
+    for i in range(cards[index]):
+        if wins == 0: break
+        for j in range(1, wins+1): cards[index+j] += 1
+    index += 1
+print(sum(cards))
