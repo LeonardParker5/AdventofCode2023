@@ -19,3 +19,5 @@ print(point_sum)
 # PART 2 #
 ##########
 file = open('Inputs/day04input.txt', 'r')
+cards = [0] * 6
+count = 0
